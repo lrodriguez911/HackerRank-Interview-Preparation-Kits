@@ -32,8 +32,12 @@ function readLine() {
 function timeConversion(s) {
     // Write your code here
 let AMoPM = s.slice(-2)
-console.log(AMoPM)
-console.log(parseInt(s.slice(0,-2).split(':')[0]))
+let hour = Number(s.slice(0,-2).split(':')[0]);
+let answer = hour < 12 && AMoPM === 'PM' ? 
+s.replace('0' + hour.toString(),(hour + 12).toString()).replace('PM', "") : 
+AMoPM === 'AM' && hour === 12 ? 
+s.replace(hour.toString(),"00").s.replace('AM', "") : false;
+console.log(answer)
 }
 
 function main() {
