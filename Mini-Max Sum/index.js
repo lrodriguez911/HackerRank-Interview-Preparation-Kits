@@ -28,7 +28,7 @@ function readLine() {
 
 function miniMaxSum(arr) {
     // Write your code here
-    let arrOrd = arr.sort((a,b) => a - b)
+    let arrOrd = arr.sort((a,b) => b - a)
     let minSum = arrOrd.filter(a => a !== arrOrd[4])
     .reduce((a,b) =>a + b ,0)
     let maxSum = arrOrd.filter(a => a !== arrOrd[0])
@@ -38,7 +38,7 @@ arrOrd[0] === arrOrd[4] && arrOrd[0] > 0 ?
 console.log(arrOrd[0] * 4,arrOrd[0] * 4): 
 console.log(minSum, maxSum)
 }
-
+//add funcition to sum
 function main() {
 
     const arr = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));
